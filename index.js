@@ -9,7 +9,7 @@ const system ={
 if (system.win === process.env.SYSTEM) {
     ffmpegPath = "./ffmpeg-4.2.1-win64-static/bin/ffmpeg.exe";
 }else if(system.linux === process.env.SYSTEM){
-    ffmpegPath = "./ffmpeg-git-20220910-arm64-static/ffmpeg";
+    ffmpegPath = "./ffmpeg-5.1.1-arm64-static/ffmpeg";
 }else{
     throw new Error("system error;系统错误");
 }
