@@ -137,3 +137,7 @@ export default {
 var ffmpeg = require("fluent-ffmpeg");
 ffmpeg.setFfmpegPath("D:/ffmpeg-20191031-7c872df-win64-static/ffmpeg-20191031-7c872df-win64-static/bin/ffmpeg");
 ```
+
+# 5.启动命令
+### 1 window启动 npm run win-server
+### 2 linux启动 npm run linux-server
