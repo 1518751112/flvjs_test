@@ -1,7 +1,18 @@
 const express =  require("express");
 const expressWebSocket = require("express-ws");
 const ffmpeg = require("fluent-ffmpeg");
-const ffmpegPath = "./ffmpeg-4.2.1-win64-static/bin/ffmpeg.exe";
+let ffmpegPath
+const system ={
+    "linux": "linux",
+    "win": "window",
+}
+if (system.win === process.env.SYSTEM) {
+    ffmpegPath = "./ffmpeg-4.2.1-win64-static/bin/ffmpeg.exe";
+}else if(system.linux === process.env.SYSTEM){
+    ffmpegPath = "./ffmpeg-git-20220910-arm64-static/ffmpeg";
+}else{
+    throw new Error("system error;系统错误");
+}
 
 ffmpeg.setFfmpegPath(ffmpegPath);
 const webSocketStream = require("websocket-stream/stream");
