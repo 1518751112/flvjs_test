@@ -1,10 +1,14 @@
-var express =  require("express");
-var expressWebSocket = require("express-ws");
-var ffmpeg = require("fluent-ffmpeg");
-ffmpeg.setFfmpegPath("D:/ffmpeg-20191031-7c872df-win64-static/ffmpeg-20191031-7c872df-win64-static/bin/ffmpeg");
-var webSocketStream = require("websocket-stream/stream");
-var WebSocket = require("websocket-stream");
-var http = require("http");
+const express =  require("express");
+const expressWebSocket = require("express-ws");
+const ffmpeg = require("fluent-ffmpeg");
+const ffmpegPath = "./ffmpeg-4.2.1-win64-static/bin/ffmpeg.exe";
+
+ffmpeg.setFfmpegPath(ffmpegPath);
+const webSocketStream = require("websocket-stream/stream");
+/*const WebSocket = require("websocket-stream");
+const http = require("http");*/
+//播放地址自行拼装：ws://localhost:8888/rtsp/[id序号自定义].flv/?url=[rtsp地址]
+//示例: ws://localhost:8888/rtsp/1.flv/?url=rtsp://admin:fairytail0@192.168.1.246:554/stream2
 function localServer() {
     let app = express();
     app.use(express.static(__dirname));
