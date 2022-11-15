@@ -145,3 +145,10 @@ ffmpeg.setFfmpegPath("D:/ffmpeg-20191031-7c872df-win64-static/ffmpeg-20191031-7c
  示例：npm run linux-server /usr/local/bin/ffmpeg
 ```
 
+# 转码说明
+```
+服务端口：8182
+//播放地址自行拼装：ws://localhost:8182/rtsp/[id序号自定义].flv/?url=[rtsp地址]
+//示例: ws://localhost:8182/rtsp/1.flv/?url=rtsp://admin:fairytail0@192.168.1.246:554/stream2
+```
+
