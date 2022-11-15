@@ -141,6 +141,7 @@ ffmpeg.setFfmpegPath("D:/ffmpeg-20191031-7c872df-win64-static/ffmpeg-20191031-7c
 # 5.启动命令
 ```
 注意：linux 使用 linux需要先解压根目录的ffmpeg-linux.zip文件
+    解密命令：unzip ./ffmpeg-linux.zip
   解压后需要给文件夹赋予可执行权限
     1. chmod 777 ffmpeg-linux
     2. chmod 777 ./ffmpeg-linux/bin/ffmpeg
