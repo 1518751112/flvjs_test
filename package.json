@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "win-server": "cross-env SYSTEM=window node ./index.js",
-    "linux-server": "cross-env SYSTEM=linux node ./index.js"
+    "linux-server": "cross-env SYSTEM=linux node ./index.js",
+    "linux-in-server": "cross-env SYSTEM=linuxIn node ./index.js"
   },
   "author": "",
   "license": "ISC",
