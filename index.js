@@ -31,7 +31,7 @@ function localServer() {
         perMessageDeflate: true
     });
     app.ws("/rtsp/:id/", rtspRequestHandle)
-    app.listen(8888);
+    app.listen(8182);
     console.log("express listened")
 }
 function rtspRequestHandle(ws, req) {
