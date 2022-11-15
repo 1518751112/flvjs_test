@@ -139,5 +139,9 @@ ffmpeg.setFfmpegPath("D:/ffmpeg-20191031-7c872df-win64-static/ffmpeg-20191031-7c
 ```
 
 # 5.启动命令
-### 1 window启动 npm run win-server
-### 2 linux启动 npm run linux-server
+```
+1 window启动 npm run win-server
+2 linux启动 npm run linux-server ffmpeg路径
+ 示例：npm run linux-server /usr/local/bin/ffmpeg
+```
+
