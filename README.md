@@ -64,6 +64,21 @@ localServer();
 ```
 ### 2.3 启动后端，node index.js
 ---
+# 2.4.启动命令
+```
+
+1 window启动 npm run win-server
+2 linux启动 npm run linux-server ffmpeg路径
+ 示例：npm run linux-server /usr/local/bin/ffmpeg
+```
+
+# 转码说明
+```
+服务端口：8182
+//播放地址自行拼装：ws://localhost:8182/rtsp/[id序号自定义].flv/?url=[rtsp地址]
+//示例: ws://localhost:8182/rtsp/1.flv/?url=rtsp://admin:fairytail0@192.168.1.246:554/stream2
+```
+
 # 3.前端环境，采用vue
 ### 3.1 vue的搭建就不赘述了，构建好一个vue项目之后，npm install flv.js -S -D
 ### 3.2 编写代码
@@ -136,26 +151,5 @@ export default {
 ```
 var ffmpeg = require("fluent-ffmpeg");
 ffmpeg.setFfmpegPath("D:/ffmpeg-20191031-7c872df-win64-static/ffmpeg-20191031-7c872df-win64-static/bin/ffmpeg");
-```
-
-# 5.启动命令
-```
-注意：linux 使用 linux需要先解压根目录的ffmpeg-linux.zip文件
-    解密命令：unzip ./ffmpeg-linux.zip
-  解压后需要给文件夹赋予可执行权限
-    1. chmod 777 ffmpeg-linux
-    2. chmod 777 ./ffmpeg-linux/bin/ffmpeg
-
-1 window启动 npm run win-server
-2 linux启动 npm run linux-server ffmpeg路径
-2 linux-in启动 npm run linux-in-server 【测试中】
- 示例：npm run linux-server /usr/local/bin/ffmpeg
-```
-
-# 转码说明
-```
-服务端口：8182
-//播放地址自行拼装：ws://localhost:8182/rtsp/[id序号自定义].flv/?url=[rtsp地址]
-//示例: ws://localhost:8182/rtsp/1.flv/?url=rtsp://admin:fairytail0@192.168.1.246:554/stream2
 ```
 

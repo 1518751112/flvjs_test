@@ -6,11 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "win-server": "cross-env SYSTEM=window node ./index.js",
-    "linux-server": "cross-env SYSTEM=linux node ./index.js",
-    "linux-in-server": "cross-env SYSTEM=linuxIn node ./index.js"
+    "linux-server": "cross-env SYSTEM=linux node ./index.js"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "ffmpeg": "0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "cross-env": "^7.0.3",
+    "http": "0.0.0",
+    "websocket-stream": "^5.5.0"
+  },
   "devDependencies": {
     "express": "^4.17.1",
     "express-ws": "^4.0.0",

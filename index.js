@@ -5,7 +5,6 @@ let ffmpegPath
 const system ={
     "linux": "linux",
     "win": "window",
-    "linuxIn": "linuxIn",
 }
 if (system.win === process.env.SYSTEM) {
     ffmpegPath = "./ffmpeg-4.2.1-win64-static/bin/ffmpeg.exe";
@@ -15,9 +14,6 @@ if (system.win === process.env.SYSTEM) {
         throw new Error("lack ffmpeg path：缺少ffmpeg路径");
     }
     ffmpegPath = envs[2];
-}else if(system.linuxIn === process.env.SYSTEM){
-    ffmpegPath = "./ffmpeg-linux/bin/ffmpeg";
-
 }else{
     throw new Error("system error;系统错误");
 }
